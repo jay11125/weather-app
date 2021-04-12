@@ -2,7 +2,13 @@
 
 <html>
 
-<head>
+<head><style>
+    #message-1,#message-2{
+       
+        font-weight: 600;
+
+    }
+</style>
     <title>Weather</title>
     <link rel="icon" href="/img/weather.png">
     <link rel="stylesheet" href="/css/styles.css">
@@ -10,20 +16,20 @@
 
 <body>
     <div class="main-content">
-        {{>header}}
+        
+        <div>{{>header}}</div>
 
-        <p>Use this site to get your weather!</p>
+        <p class="info">Enter a location below to get the weather!</p>
 
         <form>
             <input placeholder="Location">
             <button>Search</button>
-        </form>
-        <p id="message-1"></p>
+        </form><br><br>
+        <p id="message-1"></p><br>
         <p id="message-2"></p>
+
     </div>
-
-    {{>footer}}
-
+      
     <script src="/js/app.js"></script>
 </body>
 

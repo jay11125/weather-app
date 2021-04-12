@@ -29,14 +29,14 @@ app.get("", (req, res) => {
 
 app.get("/about", (req, res) => {
   res.render("about", {
-    title: "About Me",
+    title: "About",
     name: "Jay Agrawal",
   });
 });
 
 app.get("/help", (req, res) => {
   res.render("help", {
-    helpText: "This is some helpful text.",
+    helpText: "You can visit my github profile if you need any help :)",
     title: "Help",
     name: "Jay Agrawal",
   });
@@ -69,19 +69,6 @@ app.get("/weather", (req, res) => {
       });
     }
   );
-});
-
-app.get("/products", (req, res) => {
-  if (!req.query.search) {
-    return res.send({
-      error: "You must provide a search term",
-    });
-  }
-
-  console.log(req.query.search);
-  res.send({
-    products: [],
-  });
 });
 
 app.get("/help/*", (req, res) => {
