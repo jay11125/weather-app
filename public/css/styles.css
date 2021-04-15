@@ -46,7 +46,11 @@ input {
   width: 30%;
   border: 1px solid #cccccc;
   border-radius: 7px;
+  outline: none;
   padding: 8px;
+}
+input:hover {
+  box-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.541);
 }
 
 button {
@@ -57,8 +61,10 @@ button {
   background: #313131;
   color: white;
   padding: 8px;
+  outline: none;
 }
 button:hover {
   color: #313131;
-  background: #b7e1fd;
+  background: #71dbaf;
+  box-shadow: 0 0.2em 0.2em rgba(0, 0, 0, 0.541);
 }
