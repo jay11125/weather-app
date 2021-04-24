@@ -19,11 +19,12 @@
         
         <div>{{>header}}</div>
 
-        <p class="info">Enter a location below to get the weather!</p>
+        <p class="info">Enter a location below or use current location to get the weather !</p>
 
         <form>
             <input placeholder="Location">
-            <button>Search</button>
+            <button id='address'>Search</button>
+            <button id="geolocation">Current Location</button>
         </form><br><br>
         <p id="message-1"></p><br>
         <p id="message-2"></p>

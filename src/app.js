@@ -71,6 +71,24 @@ app.get("/weather", (req, res) => {
   );
 });
 
+app.get("/weather/current-location", (req, res) => {
+  const coordinates = `${req.query.long},${req.query.lat}`;
+  forecast(req.query.lat, req.query.long, (error, forecastData) => {
+    if (error) {
+      return res.send({ error });
+    }
+    geocode(coordinates, (error, { location } = {}) => {
+      if (error) {
+        return res.send({ error });
+      }
+      res.send({
+        forecast: forecastData,
+        location,
+      });
+    });
+  });
+});
+
 app.get("/help/*", (req, res) => {
   res.render("404", {
     title: "404",
